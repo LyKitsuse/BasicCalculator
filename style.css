@@ -1,0 +1,101 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Main Calculator Body*/
+#calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    height: 450px;
+    width: 300px;
+}
+
+/*Calculator Screen*/
+#calculator .screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    border: 2px solid black;
+    width: 250px;
+    height: 70px;
+    margin: 20px;;
+}
+    #inputScreen, #output {
+        margin: 5px;
+        text-align: right;
+        height: 30px;
+    }
+
+/*Calcultor Buttons*/
+.buttons button {
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin: auto; */
+}
+
+/*Row 1*/
+.buttons .one {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    justify-content: space-evenly;
+    margin: 10px 0px;
+}
+    .buttons .one button {
+        margin:0px -3px;
+    }
+
+/*Row 2*/
+.buttons .two {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    justify-content: space-evenly;
+}
+    .buttons .two .left {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width:200px;
+        
+    }
+
+    .buttons .two .right button{
+        height: 100px;
+    }
+
+/*Row 3*/
+.buttons .three {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    justify-content: space-evenly;
+}
+    .buttons .three .left{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width:200px;
+    }
+    .buttons .three .right button{
+        height: 112px;
+    }
+
+    .buttons .three .left #zero{
+        width: 112px;
+    }
