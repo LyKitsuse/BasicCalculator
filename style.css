@@ -7,7 +7,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;                                                
+    background-color: #282c2f;  
+    color: white;                                              
 }
 
 /*Main Calculator Body*/
@@ -54,6 +55,9 @@ body {
     color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+    .buttons button:hover {
+        background-color: #454545;
+    }
 
 .buttons {
     display: flex;
@@ -78,6 +82,10 @@ body {
 
     .buttons .one #clear {
         background-color: #0cbaba;
+    }
+
+    .buttons .one #clear:hover {
+        background-color: #0a9999;
     }
 
 /*Row 2*/
@@ -122,4 +130,8 @@ body {
 
 .buttons #divide, .buttons #multiply, .buttons #subtract, .buttons #add {
     background-color: #341637;
+}
+
+.buttons #divide:hover, .buttons #multiply:hover, .buttons #subtract:hover, .buttons #add:hover {
+    background-color: #432445;
 }

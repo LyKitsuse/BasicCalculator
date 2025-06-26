@@ -32,6 +32,16 @@ let firstNum = false;
 let operandUsed = false;
 let dotUsed = false;
 
+document.addEventListener('keydown', ({key}) => {
+  if(event.key === "Backspace"){
+    if(!(input.length < 2)){
+        input = input.slice(0, -1);
+        screen.textContent = input;
+    }
+  }
+});
+
+
 
 // Number Interaction
 one.onclick = () => {
@@ -101,6 +111,7 @@ clear.onclick = () => {
     firstInput = "";
     screen.textContent = "0";
     screen2.textContent = "";
+    operand = "";
 }
 
 // Operations
