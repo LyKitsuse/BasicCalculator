@@ -1,9 +1,13 @@
+* {
+    font-family: 'Calculator', sans-serif;    
+}
 
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: white;                                                
 }
 
 /*Main Calculator Body*/
@@ -12,9 +16,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    border: 2px solid #282c2f;
+    background-color: #282c2f;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 450px;
     width: 300px;
+    border-radius: 25px;
 }
 
 /*Calculator Screen*/
@@ -22,15 +29,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: right;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 250px;
     height: 70px;
     margin: 20px;;
+    border-radius: 25px;
 }
     #inputScreen, #output {
         margin: 5px;
         text-align: right;
         height: 30px;
+        color: white;
     }
 
 /*Calcultor Buttons*/
@@ -38,6 +47,12 @@ body {
     width: 50px;
     height: 50px;
     margin: 3px;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 15px;
+    background-color: #323736;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .buttons {
@@ -45,6 +60,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    
     /* margin: auto; */
 }
 
@@ -58,6 +74,10 @@ body {
 }
     .buttons .one button {
         margin:0px -3px;
+    }
+
+    .buttons .one #clear {
+        background-color: #0cbaba;
     }
 
 /*Row 2*/
@@ -97,5 +117,9 @@ body {
     }
 
     .buttons .three .left #zero{
-        width: 112px;
+        width: 115px;
     }
+
+.buttons #divide, .buttons #multiply, .buttons #subtract, .buttons #add {
+    background-color: #341637;
+}

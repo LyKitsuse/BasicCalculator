@@ -30,6 +30,7 @@ let operand;
 
 let firstNum = false;
 let operandUsed = false;
+let dotUsed = false;
 
 
 // Number Interaction
@@ -83,10 +84,21 @@ zero.onclick = () => {
     screen.textContent = input;
 }
 
+dot.onclick = () => {
+    if(!dotUsed){
+        input += ".";
+        dotUsed = true;
+        screen.textContent = input;
+    }
+    
+}
+
 // Clear
 clear.onclick = () => {
     input = ""
     operandUsed = false;
+    dotUsed = false;
+    firstInput = "";
     screen.textContent = "0";
     screen2.textContent = "";
 }
@@ -95,6 +107,7 @@ clear.onclick = () => {
 add.onclick = () => {
     if(!operandUsed){
         operandUsed = true;
+        dotUsed = false;
         firstInput = input;
         input = "";
         screen.textContent = "";
@@ -106,6 +119,7 @@ add.onclick = () => {
 subtract.onclick = () => {
     if(!operandUsed){
         operandUsed = true;
+        dotUsed = false;
         firstInput = input;
         input = "";
         screen.textContent = "";
@@ -117,6 +131,7 @@ subtract.onclick = () => {
 multiply.onclick = () => {
     if(!operandUsed){
         operandUsed = true;
+        dotUsed = false;
         firstInput = input;
         input = "";
         screen.textContent = "";
@@ -128,6 +143,7 @@ multiply.onclick = () => {
 divide.onclick = () => {
     if(!operandUsed){
         operandUsed = true;
+        dotUsed = false;
         firstInput = input;
         input = "";
         screen.textContent = "";
@@ -137,10 +153,16 @@ divide.onclick = () => {
 }
 
 equal.onclick = () => {
-    screen.textContent = operate(operand, firstInput, input);
-    screen2.textContent = firstInput + "" + operand + "" + input;
-    input = operate(operand, firstInput, input);
+    if((operate(operand, firstInput, input))){
+        screen.textContent = operate(operand, firstInput, input);
+        screen2.textContent = firstInput + "" + operand + "" + input;
+        input = operate(operand, firstInput, input);
+    } else {
+        screen.textContent = "Math Error";
+        screen2.textContent = firstInput + "" + operand + "" + input;
+    }
     operandUsed = false;
+    dotUsed = false;
 }
 
 // Main Operate
